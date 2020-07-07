@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'bet_stats.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'jblackwell',
-        'USER': 'jblackwell',
-        'PASSWORD': 'blainterview',
-        'HOST': 'bla-interview.cyqxhkdaqmwx.us-west-2.rds.amazonaws.com',   # Or an IP Address that your DB is hosted on
+        'NAME': os.environ.get('DB_NAME'),#'jblackwell'),
+        'USER': os.environ.get('DB_USERNAME'),#'jblackwell'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),#'bla-interview.cyqxhkdaqmwx.us-west-2.rds.amazonaws.com'),   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }
