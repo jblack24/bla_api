@@ -1,6 +1,5 @@
 import pandas as pd
 import os
-import numpy as np
 from django.db import connection
 from django.http import HttpResponse
 import json
